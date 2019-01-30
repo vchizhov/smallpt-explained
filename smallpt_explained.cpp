@@ -38,7 +38,7 @@ double random()
 }
 
 #ifndef M_PI
-#define M_PI 3.1415926535897932384626433832795f
+#define M_PI 3.1415926535897932384626433832795
 #endif
 
 
@@ -338,7 +338,7 @@ vec3 radiance(const Ray &r, int depth) {
 	// refracted ray direction
 	vec3 tdir = normalize(r.d*nnt - n * ((into ? 1 : -1)*(cosTheta*cosTheta + sqrt(cosTheta2Sqr))));
 
-	// Schlick's Fresnel approximation:  Schlick, Christophe, “An Inexpensive BDRF Model for Physically based Rendering,”
+	// Schlick's Fresnel approximation:  Schlick, Christophe, Â“An Inexpensive BDRF Model for Physically based Rendering,Â”
 	double a = nt - nc;
 	double b = nt + nc;
 	double R0 = a * a / (b*b);

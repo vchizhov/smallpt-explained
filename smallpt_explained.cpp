@@ -152,7 +152,7 @@ struct Sphere {
 		// A = |r.d|^2 = 1 (r.d normalized), B = <r.d,p-r.o>, C = |p-r.o|^2 - rad^2, det = B^2 - C
 		// t1,2 = B -+ sqrt(det) (as long as det>=0)
 		vec3 op = p - r.o;
-		// removed unnecessary eps (replaced with 0) and modified intersect to return negative if no intersection
+		// moved eps to the scene intersect routine, and modified sphere intersect to return negative if no intersection
 		double t;
 		double b = dot(op, r.d);
 		double det = b * b - dot(op, op) + rad * rad;

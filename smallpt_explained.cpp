@@ -430,11 +430,11 @@ int main(int argc, char *argv[]) {
 						// set r1' = 2 * r1
 
 						// renormalize pdfs: f'(x) = 2 * f(x)
-						// r1<=1 -> 
+						// r1'<=1 -> 
 						// -1<= x <= 0, F(x) - F(-1) = 2x + x^2 + 2 - 1 = (x+1)^2 = r1', then:
 						//  x = sqrt(r1')-1
 
-						// r1 > 1 ->
+						// r1' > 1 ->
 						// 0<=x<=1, F(x) - F(0) = 2x - x^2 = -(x^2 - 2x + 1) +1 = -(x-1)^2 + 1 = r1' - 1
 						// x = 1 - sqrt(2-r1'), note that the negative root is taken since x<=1
 						double r1 = 2 * random();

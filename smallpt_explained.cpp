@@ -22,7 +22,7 @@
 	added depth limit to avoid infinite recursion on 'bad' scenes (introduces bias)
 	modified the probability for the Russian roulete to use luminance rather than max of the 3 components
 	minor changes to the Vec class (now vec3)
-	moved eps (and the check) from the Spher class to the scene intersect function
+	moved eps (and the check) from the Sphere class to the scene intersect function
 	modified Sphere::intersect() to return negative if there is no intersection (saves one ?: evaluation)
 	changed the arbitrary large number in intersect to std::numeric_limits<double>::infinity()
 	added a function returning the normal of the sphere at some point (useful if a base class Surface is made)
